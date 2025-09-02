@@ -42,8 +42,16 @@ const updateProgressText = () => {
       backgroundMusic.style.display = 'block';
 
       break;
+    case 60:
+      progressText.textContent =
+        "Congratulations! You've gone 60 days without smoking.";
+      progressPicture.src = '/pictures/60days.jpg';
+      backgroundMusic.src = '/songs/SixtyDaysStrong.mp3';
+      backgroundMusic.style.display = 'block';
+      break;
     default:
       progressText.textContent = `Days without smoking: ${model.inputs.mainPage.daysNoSmokeCount}`;
+      progressPicture.src = '/pictures/1days.jpg';
   }
 };
 
