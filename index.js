@@ -6,11 +6,14 @@ const progressButton = document.getElementById('increment-button');
 const daysCount = document.getElementById('days-count');
 const progressPicture = document.getElementById('progress-image');
 const backgroundMusic = document.getElementById('background-music');
+const goalInput = document.getElementById('goalInput');
+const goalInputLabel = document.getElementById('goalInputLabel');
+const goal = document.getElementById('goal');
 
-let daysNoSmokeCount = 0;
+//let daysNoSmokeCount = 0;
 
 const updateProgressText = () => {
-  switch (daysNoSmokeCount) {
+  switch (model.inputs.mainPage.daysNoSmokeCount) {
     case 0:
       progressText.textContent = "Welcome! Let's help Sasuke quit smoking.";
       progressPicture.src = '/pictures/0days.jpg';
@@ -40,27 +43,34 @@ const updateProgressText = () => {
 
       break;
     default:
-      progressText.textContent = `Days without smoking: ${daysNoSmokeCount}`;
+      progressText.textContent = `Days without smoking: ${model.inputs.mainPage.daysNoSmokeCount}`;
   }
 };
 
 startButton.addEventListener('click', () => {
   progressContainer.style.display = 'block';
   startButton.style.display = 'none';
+  goalInput.style.display = 'none';
+  goalInputLabel.style.display = 'none';
+  goal.innerHTML = model.inputs.mainPage.noSmokeDaysGoal;
 });
 
 progressButton.addEventListener('click', () => {
-  daysNoSmokeCount++;
-  daysCount.textContent = daysNoSmokeCount;
+  model.inputs.mainPage.daysNoSmokeCount++;
+  daysCount.textContent = model.inputs.mainPage.daysNoSmokeCount;
   //   progressText.textContent = `Days without smoking: ${daysNoSmokeCount}`;
   resetButton.style.display = 'inline';
   updateProgressText();
 });
 
 resetButton.addEventListener('click', () => {
-  daysNoSmokeCount = 0;
+  model.inputs.mainPage.daysNoSmokeCount = 0;
   daysCount.textContent = daysNoSmokeCount;
   //   progressText.textContent = `Days without smoking: ${daysNoSmokeCount}`;
   resetButton.style.display = 'none';
   updateProgressText();
+});
+
+goalInput.addEventListener('change', () => {
+  model.inputs.mainPage.noSmokeDaysGoal = parseInt(goalInput.value);
 });
