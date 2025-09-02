@@ -54,6 +54,7 @@ const updateProgressText = () => {
     default:
       progressText.textContent = `Days without smoking: ${model.inputs.mainPage.daysNoSmokeCount}`;
       progressPicture.src = '/pictures/1days.jpg';
+      backgroundMusic.src = '';
   }
 };
 
