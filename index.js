@@ -45,7 +45,7 @@ const updateProgressText = () => {
     case 60:
       progressText.textContent =
         "Congratulations! You've gone 60 days without smoking.";
-      progressPicture.src = '/pictures/60days.jpg';
+      progressPicture.src = '/pictures/60days.jpeg';
       backgroundMusic.src = '/songs/SixtyDaysStrong.mp3';
       backgroundMusic.style.display = 'block';
       break;
