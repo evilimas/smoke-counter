@@ -1,3 +1,4 @@
+const jsConfetti = new JSConfetti();
 const startButton = document.getElementById('start-button');
 const progressContainer = document.getElementById('progress-container');
 const progressText = document.getElementById('progress-text');
@@ -40,7 +41,7 @@ const updateProgressText = () => {
       progressPicture.src = '/pictures/30days.jpg';
       backgroundMusic.src = '/songs/Smoke-Free Days.mp3';
       backgroundMusic.style.display = 'block';
-
+      jsConfetti.addConfetti();
       break;
     case 60:
       progressText.textContent =
@@ -48,6 +49,7 @@ const updateProgressText = () => {
       progressPicture.src = '/pictures/60days.jpeg';
       backgroundMusic.src = '/songs/SixtyDaysStrong.mp3';
       backgroundMusic.style.display = 'block';
+      jsConfetti.addConfetti();
       break;
     default:
       progressText.textContent = `Days without smoking: ${model.inputs.mainPage.daysNoSmokeCount}`;
@@ -66,7 +68,6 @@ startButton.addEventListener('click', () => {
 progressButton.addEventListener('click', () => {
   model.inputs.mainPage.daysNoSmokeCount++;
   daysCount.textContent = model.inputs.mainPage.daysNoSmokeCount;
-  //   progressText.textContent = `Days without smoking: ${daysNoSmokeCount}`;
   resetButton.style.display = 'inline';
   updateProgressText();
 });
@@ -74,7 +75,6 @@ progressButton.addEventListener('click', () => {
 resetButton.addEventListener('click', () => {
   model.inputs.mainPage.daysNoSmokeCount = 0;
   daysCount.textContent = model.inputs.mainPage.daysNoSmokeCount;
-  //   progressText.textContent = `Days without smoking: ${daysNoSmokeCount}`;
   resetButton.style.display = 'none';
   updateProgressText();
 });
