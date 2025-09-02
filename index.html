@@ -13,7 +13,14 @@
         Help Sasuke quit smoking by tracking his daily progress and providing
         support.
       </p>
-      <button id="start-button">Start</button>
+      <img
+        id="progress-image"
+        class="progress-image"
+        src="/pictures/0days.jpg"
+        alt=""
+      />
+
+      <button class="start-button" id="start-button">Start</button>
       <div id="progress-container" style="display: none">
         <h2>
           Sasuke's Progress - <span id="days-count">0</span
@@ -24,6 +31,13 @@
         <button id="reset-button" style="display: none">Reset</button>
       </div>
     </div>
+    <audio
+      id="background-music"
+      controls
+      autoplay
+      style="display: none"
+      src=""
+    ></audio>
     <script src=" index.js"></script>
   </body>
 </html>

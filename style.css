@@ -1,0 +1,13 @@
+.progress-image {
+  width: 300px;
+}
+
+.start-button {
+  display: block;
+}
+
+#background-music {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
