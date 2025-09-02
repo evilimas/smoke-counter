@@ -73,7 +73,7 @@ progressButton.addEventListener('click', () => {
 
 resetButton.addEventListener('click', () => {
   model.inputs.mainPage.daysNoSmokeCount = 0;
-  daysCount.textContent = daysNoSmokeCount;
+  daysCount.textContent = model.inputs.mainPage.daysNoSmokeCount;
   //   progressText.textContent = `Days without smoking: ${daysNoSmokeCount}`;
   resetButton.style.display = 'none';
   updateProgressText();
