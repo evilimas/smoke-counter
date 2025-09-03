@@ -17,7 +17,7 @@
 /* .img-container {
 } */
 
-#app{
+#app, .img-container{
   border-radius: 5px;
   margin: 20px;
   padding: 20px;
