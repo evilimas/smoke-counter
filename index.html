@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Make Sasuke Stop Smoking</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="model.js"></script>
-  </head>
 
-  <body>
-    <div id="app">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make Sasuke Stop Smoking</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="model.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div id="container">
       <h1>Make Sasuke Stop Smoking</h1>
       <p>
-        <span class="rough-notation" data-annotation="highlight"
-          >Help Sasuke quit smoking</span
-        >
+        <span class="rough-notation" data-annotation="highlight">Help Sasuke quit smoking</span>
         by tracking his daily progress and providing support.
       </p>
       <div class="img-container">
-        <img
-          id="progress-image"
-          class="progress-image"
-          src="/pictures/0days.jpg"
-          alt=""
-        />
+        <img id="progress-image" class="progress-image" src="/pictures/0days.jpg" alt="" />
       </div>
       <div id="goalInputLabel">
         <label for="goalInput">Set your goal</label>
@@ -32,26 +27,18 @@
       <button class="start-button" id="start-button">Start</button>
       <div id="progress-container" style="display: none">
         <h2>
-          Sasuke's Progress - <span id="days-count">0</span
-          ><span id="days"> days</span> of <span id="goal"></span> days
+          Sasuke's Progress - <span id="days-count">0</span><span id="days"> days</span> of <span id="goal"></span> days
         </h2>
         <p id="progress-text"></p>
         <button id="increment-button">Increment +</button>
         <button id="reset-button" style="display: none">Reset</button>
       </div>
     </div>
-    <audio
-      id="background-music"
-      controls
-      autoplay
-      style="display: none"
-      src=""
-    ></audio>
-    <script type="module" src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/rough-notation?module"
-    ></script>
-  </body>
+  </div>
+  <audio id="background-music" controls autoplay style="display: none" src=""></audio>
+  <script type="module" src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  <script type="module" src="https://unpkg.com/rough-notation?module"></script>
+</body>
+
 </html>
