@@ -1,4 +1,5 @@
 const jsConfetti = new JSConfetti();
+import { annotate } from 'https://unpkg.com/rough-notation?module';
 const startButton = document.getElementById('start-button');
 const progressContainer = document.getElementById('progress-container');
 const progressText = document.getElementById('progress-text');
@@ -10,6 +11,11 @@ const backgroundMusic = document.getElementById('background-music');
 const goalInput = document.getElementById('goalInput');
 const goalInputLabel = document.getElementById('goalInputLabel');
 const goal = document.getElementById('goal');
+
+const e = document.querySelector('.rough-notation');
+const annotation = annotate(e, { type: 'underline', color: 'red' });
+
+annotation.show();
 
 //let daysNoSmokeCount = 0;
 
