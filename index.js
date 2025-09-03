@@ -55,6 +55,7 @@ const updateProgressText = () => {
       progressText.textContent = `Days without smoking: ${model.inputs.mainPage.daysNoSmokeCount}`;
       progressPicture.src = '/pictures/1days.jpg';
       backgroundMusic.src = '';
+      backgroundMusic.style.display = 'none';
   }
 };
 
@@ -77,6 +78,8 @@ resetButton.addEventListener('click', () => {
   model.inputs.mainPage.daysNoSmokeCount = 0;
   daysCount.textContent = model.inputs.mainPage.daysNoSmokeCount;
   resetButton.style.display = 'none';
+  backgroundMusic.src = '';
+  backgroundMusic.style.display = 'none';
   updateProgressText();
 });
 
