@@ -29,7 +29,7 @@ const updateProgressText = () => {
     case 1:
       progressText.textContent =
         "Congratulations! You've gone 1 day without smoking keep going.";
-      progressPicture.src = '/pictures/1days.jpg';
+      progressPicture.src = '/pictures/no-more.png';
       break;
     case 7:
       progressText.textContent =
